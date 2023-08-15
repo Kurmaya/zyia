@@ -225,6 +225,8 @@ h3 {
   margin: 1% auto auto;
   border: none;
   background: #b98580;
+  background: #974EC39a;
+  background: #9F91CC;
   color: white;
   font-family: 'Montserrat';
   text-transform: uppercase;
@@ -547,6 +549,9 @@ h3 {
   height: 60px;
   font-family: 'Montserrat', sans-serif;
   background: #b98580;
+  background: #800080;
+  background: #9F91CC;
+  /* background: #5C4B99; */
   padding: 1rem;
   border: none;
   font-size: 1rem;
