@@ -227,6 +227,7 @@ h3 {
   background: #b98580;
   background: #974EC39a;
   background: #9F91CC;
+  background: #974EC3;
   color: white;
   font-family: 'Montserrat';
   text-transform: uppercase;
@@ -551,6 +552,7 @@ h3 {
   background: #b98580;
   background: #800080;
   background: #9F91CC;
+  background: #974EC3;
   /* background: #5C4B99; */
   padding: 1rem;
   border: none;
@@ -588,6 +590,112 @@ form input {
 
 .toggle-button {
   display: none;
+}
+
+/* footer section*/
+#footer{
+  width:100%;
+  position: relative;
+  text-align:center;
+}
+
+#footer h2{
+line-height: 1.8;
+letter-spacing: 0.75rem;
+}
+#footer h3{
+  font-weight: 300;
+  color:#1d1d1d;
+  font-style: italic;
+  letter-spacing: 0.01rem!important;
+  line-height: 1.8;
+}
+.instagram-holder{
+  width: 100%;
+  height: 200px;
+}
+.footer-socials{
+  width:50%;
+  margin: auto;
+
+}
+.footer-socials .social{
+  margin: auto!important;
+  justify-content: center;
+  font-size: 2rem!important;
+}
+.footer-copy h3{
+  font-size: 1rem;
+  font-weight: 400!important;
+  padding:2rem 0;
+}
+.footer-copy ul li{
+  display: inline;
+  font-family: 'baker'!important;
+
+  font-size: 1.2rem;
+  font-weight: 400!important;
+  margin: auto 10px;
+  padding:0 .5rem;
+}
+.footer-copy a{
+  text-decoration: none;
+  color:#1d1d1d;
+}
+@media (min-width:300px) and (max-width:676px){
+
+  .swiper{
+    /* height: 60vh!important; */
+  }
+  .swiper-slide{
+    margin: auto;
+    height: 80%!important;
+  }
+  #about{
+    margin-top: 35%;
+  }
+  .about-container{
+    width: 100%;
+  }
+  .about-flex{
+    flex-direction: column;
+  }
+  .about-person{
+    width: 100%;
+  }
+  .person{
+    width: 70%;
+    margin: auto;
+  }
+  .person img{
+    /* width: 100%; */
+    height: 40%;
+  }
+  .stroke{
+    width: 85%;
+left: 6%;
+top: 50%;
+  }
+  .about-person h2{
+    font-size: 3rem;
+  }
+  .about-person h3{
+    font-size: 1.5rem;
+  }
+
+  .image-wrapper{
+    grid-template-columns: repeat(1,1fr);
+  }
+  form input{
+    width:150px;
+  }
+  form button{
+    width:25%;
+  }
+  #subscribe h3{
+    font-size: 1rem;
+    width: 60%;
+  }
 }
 @media (min-width:677px) and (max-width:1200px){
   .header{
