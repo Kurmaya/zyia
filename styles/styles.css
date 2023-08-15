@@ -624,15 +624,17 @@ letter-spacing: 0.75rem;
   justify-content: center;
   font-size: 2rem!important;
 }
+.footer-copy{
+  padding:1rem 0;
+}
 .footer-copy h3{
   font-size: 1rem;
   font-weight: 400!important;
-  padding:2rem 0;
+line-height: 1.8;
 }
 .footer-copy ul li{
   display: inline;
   font-family: 'baker'!important;
-
   font-size: 1.2rem;
   font-weight: 400!important;
   margin: auto 10px;
