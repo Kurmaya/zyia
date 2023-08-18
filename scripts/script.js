@@ -1,5 +1,6 @@
 var links = document.querySelectorAll('.nav-links');
-var soc = document.querySelectorAll('.social i');
+var soc = document.querySelectorAll('.header .social i');
+var fsoc = document.querySelectorAll('.footer-socials .social i');
 var look = document.querySelectorAll('.image-wrapper');
 var imgLook = document.querySelectorAll('.image-wrapper img');
 var light = document.getElementById('lightbox');
@@ -126,6 +127,20 @@ soc.forEach((s) => {
   })
   s.addEventListener('mouseleave', function() {
     soc.forEach((a) => {
+      a.classList.remove('active');
+    })
+    s.classList.remove('active');
+  })
+})
+fsoc.forEach((s) => {
+  s.addEventListener('mouseover', function() {
+    fsoc.forEach((a) => {
+      a.classList.add('active');
+    })
+    s.classList.remove('active');
+  })
+  s.addEventListener('mouseleave', function() {
+    fsoc.forEach((a) => {
       a.classList.remove('active');
     })
     s.classList.remove('active');

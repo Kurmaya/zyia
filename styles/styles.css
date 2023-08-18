@@ -69,11 +69,13 @@ h3 {
   /* margin-top:5px; */
   margin: auto 0;
   position: relative;
+
   /* margin-left: 5%; */
 }
 
 .branding h2 {
   font-size: 1rem;
+  color:#ececec;
 }
 
 .branding a {
@@ -115,6 +117,8 @@ h3 {
   transition: .3s ease;
   /* color:black; */
   color: #1d1d1d;
+  color:#ececec!important;
+  /* color:white!important; */
 }
 
 .nav-links.active {
@@ -134,15 +138,19 @@ h3 {
   font-size: 1.5rem;
   display: flex;
   gap: 15px;
+
   /* width:30%; */
 }
 
 .social i {
   transition: .3s ease;
   cursor: pointer;
+  color:white!important;
 }
-
-.social i.active {
+.fa-facebook-f{
+  font-size: 1.4rem!important;
+}
+.social i.active,.footer-socials .social i.active {
   opacity: .4;
 }
 
@@ -420,12 +428,13 @@ h3 {
 #lightbox.active {
   display: block;
   z-index: 10000;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   background: rgba(255, 255, 255, .98);
+  overflow-y: scroll;
 }
 
 .close {
@@ -439,6 +448,7 @@ h3 {
   place-items:center;
   transition: .3s ease;
   font-weight:bold;
+  z-index: 1000;
 }
 .close:hover{
   background: red;
@@ -524,16 +534,21 @@ h3 {
   margin: 5% auto;
   background: #f2eeed;
   padding: 3rem 0;
+  position: relative;
 }
 
 #subscribe img {
   position: absolute;
+  width: 32%;
+  top:8%;
+  opacity: 0.6;
   z-index: 0;
 }
 
 #subscribe h2 {
   font-size: 3rem;
   z-index: 2;
+  /* color:white; */
 }
 
 #subscribe h3 {
@@ -553,6 +568,7 @@ h3 {
   background: #800080;
   background: #9F91CC;
   background: #974EC3;
+  background: #512B81;
   /* background: #5C4B99; */
   padding: 1rem;
   border: none;
@@ -622,7 +638,14 @@ letter-spacing: 0.75rem;
 .footer-socials .social{
   margin: auto!important;
   justify-content: center;
-  font-size: 2rem!important;
+  font-size: 1.8rem!important;
+
+}
+.footer-socials .social i{
+  color:black!important;
+}
+.footer-socials .social .fa-facebook-f{
+  font-size: 1.65rem!important;
 }
 .footer-copy{
   padding:1rem 0;
@@ -640,12 +663,19 @@ line-height: 1.8;
   margin: auto 10px;
   padding:0 .5rem;
 }
+
+.footer-copy a:hover{
+  transition: .3s ease;
+  opacity: 0.6;
+}
 .footer-copy a{
   text-decoration: none;
   color:#1d1d1d;
 }
 @media (min-width:300px) and (max-width:676px){
-
+  .header{
+    height: 80px;
+  }
   .swiper{
     /* height: 60vh!important; */
   }
@@ -671,7 +701,8 @@ line-height: 1.8;
   }
   .person img{
     /* width: 100%; */
-    height: 40%;
+    margin: auto;
+    height: 10%;
   }
   .stroke{
     width: 85%;
@@ -698,6 +729,40 @@ top: 50%;
     font-size: 1rem;
     width: 60%;
   }
+  .light-holder {
+    flex-direction: column;
+  }
+  .close{
+    width:30px;
+    /* height: 30px; */
+
+  }
+  .light-img-holder{
+    width:100%;
+  }
+  .light-holder .products-desc{
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: 1;
+    padding: 0;
+  }
+  .light-holder .products-desc h2{
+    width:25%;
+  }
+    .light-holder .products-desc p{
+      width:70%;
+      font-size: .9rem;
+    }
+  .prods-item{
+  display: flex;
+  width:100%;
+  height: 100px;
+  }
+
 }
 @media (min-width:677px) and (max-width:1200px){
   .header{
@@ -709,24 +774,28 @@ top: 50%;
   .branding{
   display: flex;
   }
+  #about{
+    margin-top:15%!important;
+  }
   .image-wrapper{
     grid-template-columns: repeat(2,1fr);
   }
 }
 @media (max-width:1000px) {
   #look-book {
-    width: 100vw;
+    width: 100%;
     /* overflow: hidden; */
   }
 
   #subscribe {
-    width: 100vw;
+    width: 100%;
     /* position: relative; */
   }
 
   #subscribe img {
     /* position: absolute; */
     width: 100%;
+
   }
 
   .toggle-button {
