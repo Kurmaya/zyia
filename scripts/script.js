@@ -1,5 +1,6 @@
 var links = document.querySelectorAll('.nav-links');
 var soc = document.querySelectorAll('.header .social i');
+var fCopy = document.querySelectorAll('.footer-copy li');
 var fsoc = document.querySelectorAll('.footer-socials .social i');
 var look = document.querySelectorAll('.image-wrapper');
 var imgLook = document.querySelectorAll('.image-wrapper img');
