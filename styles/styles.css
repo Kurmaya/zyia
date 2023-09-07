@@ -159,7 +159,7 @@ h3 {
   height: 100%;
   position: relative;
   margin: auto;
-  top: 10vh;
+  top: 11vh;
 }
 
 .swiper {
@@ -188,6 +188,7 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-fit: contain;
   transition: .3s ease;
 }
 

@@ -44,10 +44,33 @@ imgLook.forEach((look, i, a) => {
   })
 
 })
+// prev.addEventListener('click', function() {
+//
+//   if (dex <= 0) {
+//     return;
+//   } else if (dex > 0) {
+//
+//     light.querySelector('.light-holder').removeChild(there);
+//
+//     light.children[1].querySelector('img').src = imgLook[dex - 1].src;
+//     dex = dex - 1;
+//
+//     // console.log(dex);
+//   }
+//   if (dex >= 0) {
+//     there = desc[dex].cloneNode(true);
+//     light.querySelector('.light-holder').appendChild(there);
+//
+//   }
+//
+// })
 prev.addEventListener('click', function() {
 
   if (dex <= 0) {
-    return;
+    light.querySelector('.light-holder').removeChild(there);
+    dex=imgLook.length-1;
+    light.children[1].querySelector('img').src = imgLook[dex].src;
+
   } else if (dex > 0) {
 
     light.querySelector('.light-holder').removeChild(there);
@@ -64,11 +87,32 @@ prev.addEventListener('click', function() {
   }
 
 })
+// next.addEventListener('click', function() {
+//   if (dex + 1 > imgLook.length - 1) {
+//     return;
+//
+//   } else if (dex <= imgLook.length) {
+//     light.querySelector('.light-holder').removeChild(there);
+//
+//
+//     light.children[1].querySelector('img').src = imgLook[dex + 1].src;
+//     dex = dex + 1;
+//
+//
+//   }
+//   if (dex <= imgLook.length) {
+//     there = desc[dex].cloneNode(true)
+//     light.querySelector('.light-holder').appendChild(there);
+//   }
+// })
 next.addEventListener('click', function() {
-  if (dex + 1 > imgLook.length - 1) {
-    return;
 
-  } else if (dex <= imgLook.length) {
+  if (dex  >= imgLook.length - 1) {
+    light.querySelector('.light-holder').removeChild(there);
+    dex=0;
+    light.children[1].querySelector('img').src = imgLook[dex].src;
+
+  } else if (dex < imgLook.length) {
     light.querySelector('.light-holder').removeChild(there);
 
 
@@ -82,7 +126,6 @@ next.addEventListener('click', function() {
     light.querySelector('.light-holder').appendChild(there);
   }
 })
-
 //close button
 
 close.addEventListener('click', function() {
@@ -150,9 +193,8 @@ fsoc.forEach((s) => {
 
 //swiper init
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
-  spaceBetween: 5,
-  slidesPerGroup: 2,
+
+  slidesPerGroup: 1,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -170,6 +212,7 @@ var swiper = new Swiper(".mySwiper", {
        1024: {
          slidesPerView: 4,
          spaceBetween: 5,
+
        }},
   navigation: {
     nextEl: ".swiper-button-next",
